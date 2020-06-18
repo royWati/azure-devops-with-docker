@@ -23,10 +23,10 @@ RUN ls
 FROM openjdk:8-jdk-alpine
 WORKDIR usr/local/service
 COPY --from=build /usr/local/service/application.yml ./
-COPY --from=build /usr/local/service/target/pg-queuemanager-v1.0.0.jar ./
+COPY --from=build /usr/local/service/target/azure-with-docker-v1.jar ./
 
 EXPOSE 6501
 
 RUN ls
 
-CMD ["java","-jar","pg-queuemanager-v1.0.0.jar"]
+CMD ["java","-jar","azure-with-docker-v1.jar"]
