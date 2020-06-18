@@ -20,7 +20,7 @@ class AzureWithDockerApplicationTests {
     void contextLoadsFail() {
         int i = 2;
 
-        assertEquals(1+2,2);
+        assertEquals(1+2,3);
     }
 
 }
